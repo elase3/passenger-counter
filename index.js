@@ -20,9 +20,11 @@ function save() {
 }
 
 function doOnOrientationChange() {
+  let dd = document.querySelector("#save-btn");
   switch (window.orientation) {
     case -90:
     case 90:
+      dd.classList.add("save-btn1");
       alert("landscape");
       break;
     default:
